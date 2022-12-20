@@ -1,0 +1,29 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: HsYAML
+Upstream-Contact: https://github.com/haskell-hvr/HsYAML/issues
+Source: https://github.com/haskell-hvr/HsYAML
+ git://github.com/haskell-hvr/HsYAML
+
+Files: *
+Copyright:
+  2007-2008, Oren Ben-Kiki
+  2015-2018, Herbert Valerio Riedel <hvr@gnu.org>
+License-Grant:
+ X-SPDX-License-Identifier: GPL-2.0-or-later
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2016-2020, Jonas Smedegaard <dr@jones.dk>
+License-Grant:
+ This file is free software;
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation;
+ either version 3 of the License, or (at your option) any later version.
+License: GPL-3+
+
+License: GPL-2+
+License-Reference: /usr/share/common-licenses/GPL-2
+
+License: GPL-3+
+License-Reference: /usr/share/common-licenses/GPL-3

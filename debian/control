@@ -1,0 +1,128 @@
+Source: haskell-hsyaml
+Section: haskell
+Priority: optional
+Maintainer: Debian Haskell Group <debian-haskell@lists.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+Build-Depends:
+ cdbs,
+ debhelper,
+ ghc,
+ ghc-prof,
+ haskell-devscripts,
+# libghc-directory-dev (<< 1.4) <!nocheck>,
+ libghc-dlist-dev (<< 0.9),
+ libghc-dlist-prof,
+# libghc-filepath-dev (<< 1.5) <!nocheck>,
+# libghc-megaparsec-dev (<< 6.6) <!nocheck>,
+# libghc-microaeson-dev (<< 0.2) <!nocheck>,
+Build-Depends-Indep:
+ ghc-doc,
+ libghc-dlist-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/haskell-hvr/HsYAML
+Vcs-Git: https://salsa.debian.org/haskell-team/haskell-hsyaml.git
+Vcs-Browser: https://salsa.debian.org/haskell-team/haskell-hsyaml
+Rules-Requires-Root: no
+
+Package: libghc-hsyaml-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${haskell:Extra-Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: pure Haskell YAML 1.2 processor - libraries
+ HsYAML is a YAML 1.2 processor implementation for Haskell.
+ .
+ Features of @HsYAML@ include:
+ .
+  * Pure Haskell implementation with small dependency footprint
+    and emphasis on strict compliance with the YAML 1.2 specification.
+  * Direct decoding to native Haskell types
+    via (aeson-inspired) typeclass-based API.
+  * Support for constructing custom YAML node graph representation
+    (including support for cyclic YAML data structures).
+  * Support for the standard (untyped) Failsafe, (strict) JSON,
+    and (flexible) Core "schemas" providing implicit typing rules
+    as defined in the YAML 1.2 specification
+    (including support for user-defined custom schemas).
+  * Event-based API resembling LibYAML's Event-based API.
+  * Low-level API access to lexical token-based scanner.
+ .
+ This package contains the libraries compiled for GHC.
+
+Package: libghc-hsyaml-doc
+Section: doc
+Architecture: all
+Depends:
+ ${haskell:Depends},
+ ${haskell:Extra-Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Description: pure Haskell YAML 1.2 parser - library documentation
+ HsYAML is a YAML 1.2 parser,
+ i.e. a library for parsing and serializing YAML documents.
+ .
+ Features of HsYAML include:
+ .
+  * Pure Haskell implementation with small dependency footprint
+    and emphasis on strict compliance with the YAML 1.2 specification.
+  * Direct decoding to native Haskell types
+    via (aeson-inspired) typeclass-based API.
+  * Allows round-tripping while preserving ordering,
+    anchors, and comments at Event-level.
+  * Support for constructing custom YAML node graph representation
+    (including support for cyclic YAML data structures).
+  * Support for the standard (untyped) Failsafe, (strict) JSON,
+    and (flexible) Core "schemas" providing implicit typing rules
+    as defined in the YAML 1.2 specification
+    (including support for user-defined custom schemas).
+  * Support for emitting YAML using /Failsafe/, (strict) /JSON/,
+    and (flexible) /Core/ \"schemas\"
+    (including support for user-defined custom encoding schemas).
+  * Event-based API resembling LibYAML's Event-based API.
+  * Low-level API access to lexical token-based scanner.
+ .
+ This package contains the library documentation for intern.
+
+Package: libghc-hsyaml-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${haskell:Extra-Depends},
+ ${misc:Depends},
+Provides:
+ ${haskell:Provides},
+Description: pure Haskell YAML 1.2 processor - profiling libraries
+ HsYAML is a YAML 1.2 processor,
+ i.e. a library for parsing and serializing YAML documents.
+ .
+ Features of HsYAML include:
+ .
+  * Pure Haskell implementation with small dependency footprint
+    and emphasis on strict compliance with the YAML 1.2 specification.
+  * Direct decoding to native Haskell types
+    via (aeson-inspired) typeclass-based API.
+  * Allows round-tripping while preserving ordering,
+    anchors, and comments at Event-level.
+  * Support for constructing custom YAML node graph representation
+    (including support for cyclic YAML data structures).
+  * Support for the standard (untyped) Failsafe, (strict) JSON,
+    and (flexible) Core "schemas" providing implicit typing rules
+    as defined in the YAML 1.2 specification
+    (including support for user-defined custom schemas).
+  * Support for emitting YAML using /Failsafe/, (strict) /JSON/,
+    and (flexible) /Core/ \"schemas\"
+    (including support for user-defined custom encoding schemas).
+  * Event-based API resembling LibYAML's Event-based API.
+  * Low-level API access to lexical token-based scanner.
+ .
+ This package contains the profiling libraries for intern.
